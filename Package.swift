@@ -34,19 +34,19 @@ let package = Package(
 extension Package {
     static var remoteDeps: [Package.Dependency] {
         [
-            .package(url: "git@github.com:Galen-IT/coreutils-ios.git", from: "1.0.2"),
+            
         ]
     }
 
     static var localDeps: [Package.Dependency] {
         [
-            .package(path: "../coreutils-ios"),
+            
         ]
     }
 
     static var targetDependencies: [Target.Dependency] {
         [
-            .product(name: "GalenitCoreUtils", package: "coreutils-ios"),
+           
         ]
     }
 }
