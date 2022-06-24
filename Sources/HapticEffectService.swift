@@ -6,7 +6,7 @@ public protocol IHapticEffectService {
     func doNotificationImpact(for feedbackType: UINotificationFeedbackGenerator.FeedbackType)
 }
 
-public class HapticEffectService: IHapticEffectService {
+public class HapticEffectService: IHapticEffectService, ObservableObject {
 
     private var impactFeedbackGenerator: UIImpactFeedbackGenerator?
     private var selectionFeedbackGenerator: UISelectionFeedbackGenerator = .init()
