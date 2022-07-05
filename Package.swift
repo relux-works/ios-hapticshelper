@@ -2,30 +2,23 @@
 // MARK: - Package Description
 import PackageDescription
 
-// ⚠️ ensure this flag is 'false' before commiting
-let localDependencies = false
-
 
 // MARK: - Package Configuration
 let package = Package(
-    name: "darwell-haptickit",
+    name: "hapticshelper-ios",
     platforms: [.iOS(.v14)],
     products: [
         .library(
-            name: "DarwellHapticKit",
-            targets: ["DarwellHapticKit"]),
+            name: "HapticsHelper",
+            targets: ["HapticsHelper"]
+        ),
     ],
-    dependencies: localDependencies ? Package.localDeps : Package.remoteDeps,
+    dependencies: Package.remoteDeps,
     targets: [
         .target(
-            name: "DarwellHapticKit",
+            name: "HapticsHelper",
             dependencies: Package.targetDependencies,
-            path: "Sources",
-            resources: [
-            ],
-            linkerSettings: [
-                .linkedFramework("GalenitCoreUtils")
-            ]
+            path: "Sources"
         ),
     ]
 )
@@ -37,13 +30,7 @@ extension Package {
             
         ]
     }
-
-    static var localDeps: [Package.Dependency] {
-        [
-            
-        ]
-    }
-
+    
     static var targetDependencies: [Target.Dependency] {
         [
            

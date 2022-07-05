@@ -1,4 +1,5 @@
 import UIKit
+import CoreHaptics
 
 public protocol IHapticEffectService {
     func doImpact(style: UIImpactFeedbackGenerator.FeedbackStyle, intensity: Float)
