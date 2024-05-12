@@ -5,7 +5,7 @@ import PackageDescription
 
 // MARK: - Package Configuration
 let package = Package(
-    name: "hapticshelper-ios",
+    name: "ios-hapticshelper",
     platforms: [.iOS(.v14)],
     products: [
         .library(
