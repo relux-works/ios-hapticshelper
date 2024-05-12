@@ -1,9 +1,6 @@
 // swift-tools-version:5.6
-// MARK: - Package Description
 import PackageDescription
 
-
-// MARK: - Package Configuration
 let package = Package(
     name: "ios-hapticshelper",
     platforms: [.iOS(.v14)],
@@ -13,27 +10,12 @@ let package = Package(
             targets: ["HapticsHelper"]
         ),
     ],
-    dependencies: Package.remoteDeps,
+    dependencies: [],
     targets: [
         .target(
             name: "HapticsHelper",
-            dependencies: Package.targetDependencies,
+            dependencies: [],
             path: "Sources"
         ),
     ]
 )
-
-// MARK: -- Dependencies
-extension Package {
-    static var remoteDeps: [Package.Dependency] {
-        [
-            
-        ]
-    }
-    
-    static var targetDependencies: [Target.Dependency] {
-        [
-           
-        ]
-    }
-}
