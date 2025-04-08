@@ -1,14 +1,15 @@
 import UIKit
 import CoreHaptics
 
+@MainActor
 public protocol IHapticEffectService {
     func doImpact(style: UIImpactFeedbackGenerator.FeedbackStyle, intensity: Float)
     func doSelectionImpact()
     func doNotificationImpact(for feedbackType: UINotificationFeedbackGenerator.FeedbackType)
 }
 
+@MainActor
 public class HapticEffectService: IHapticEffectService, ObservableObject {
-
     private var impactFeedbackGenerator: UIImpactFeedbackGenerator?
     private var selectionFeedbackGenerator: UISelectionFeedbackGenerator = .init()
     private var notificationFeedbackGenerator: UINotificationFeedbackGenerator = .init()
