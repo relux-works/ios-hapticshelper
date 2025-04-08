@@ -2,7 +2,7 @@ import UIKit
 import CoreHaptics
 
 @MainActor
-public protocol IHapticEffectService {
+public protocol IHapticEffectService: Sendable {
     func doImpact(style: UIImpactFeedbackGenerator.FeedbackStyle, intensity: Float)
     func doSelectionImpact()
     func doNotificationImpact(for feedbackType: UINotificationFeedbackGenerator.FeedbackType)
